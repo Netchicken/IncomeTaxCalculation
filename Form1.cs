@@ -10,8 +10,6 @@ namespace IncomeTaxCalculation
         private void btnCalculateTax_Click(object sender, EventArgs e)
         {
             Single income = 0, tax = 0;
-
-
             if (Single.TryParse(txtIncome.Text, out income))
             {
                 Single.TryParse(txtIncome.Text, out income);
@@ -19,7 +17,7 @@ namespace IncomeTaxCalculation
             else
             {
                 MessageBox.Show("Enter a valid income ");
-            };
+            }
 
             if (income <= 10000)
             {
@@ -37,11 +35,7 @@ namespace IncomeTaxCalculation
             {
                 tax = income * 0.30f;
             }
-
             lblOutput.Text = tax.ToString("C");
-
-
-
         }
     }
 }
